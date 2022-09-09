@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Voting",
+      "request": "launch",
+      "mainClass": "Voting",
+      "projectName": "Eletronic Voting Machine_cebe2e07"
+    },
+    {
+      "type": "java",
       "name": "Launch Current File",
       "request": "launch",
       "mainClass": "${file}"

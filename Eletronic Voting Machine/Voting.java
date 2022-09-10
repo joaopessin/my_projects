@@ -237,7 +237,187 @@ public class Voting {
         }
 
       } else if (opcaoUsuario == 2) { // Apurar votos
-        System.out.println("Opção 2.");
+        String senhaCorreta = "ABC123", senhaInserida = "";
+
+        System.out.println("\n--------------------------------------------------");
+        System.out.print("\nInforme a senha: ");
+        senhaInserida = entrada.next();
+
+        if (senhaInserida.equals(senhaCorreta)) {
+          if ((ptc >= pta) && (ptc >= ptd) && (ptc >= ptf)) { // 1. PTC
+            System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+
+            if ((pta >= ptd) && (pta >= ptf)) { // 2. PTA
+              System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+
+              if (ptd >= ptf) {
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+              } else {
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+              }
+
+            } else if ((ptd >= pta) && (ptd >= ptf)) { // 2. PTD
+              System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+
+              if (pta >= ptf) {
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+              } else {
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+              }
+
+            } else if ((ptf >= pta) && (ptf >= ptd)) { // 2. PTF
+              System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+
+              if (pta >= ptd) {
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+              } else {
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+              }
+            }
+
+          } else if ((pta >= ptc) && (pta >= ptd) && (pta >= ptf)) { // 1. PTA
+            System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+
+            if ((ptc >= ptd) && (ptc >= ptf)) { // 2. PTC
+              System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+
+              if (ptd >= ptf) {
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+              } else {
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+              }
+
+            } else if ((ptd >= ptc) && (ptd >= ptf)) { // 2. PTD
+              System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+
+              if (ptc >= ptf) {
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+              } else {
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+              }
+
+            } else if ((ptf >= ptc) && (ptf >= ptd)) { // 2. PTF
+              System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+
+              if (ptc >= ptd) {
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+              } else {
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+              }
+            }
+
+          } else if ((ptd >= ptc) && (ptd >= pta) && (ptd >= ptf)) {      // 1. PTD
+            System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+
+            if ((ptc >= pta) && (ptc >= ptf)) { // 2. PTC
+              System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+
+              if (pta >= ptf) {
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+              } else {
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+              }
+
+            } else if ((pta >= ptc) && (pta >= ptf)) { // 2. PTA
+              System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+
+              if (ptc >= ptf) {
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+              } else {
+                System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+              }
+
+            } else if ((ptf >= ptc) && (ptf >= pta)) { // 2. PTF
+              System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+
+              if (pta >= ptc) {
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+              } else {
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+              }
+            }
+
+          } else if ((ptf >= ptc) && (ptf >= pta) && (ptf >= ptd)) {      // 1. PTF
+            System.out.println("\n22. Luzia Santos  [PTF] | Votos: " + ptf);
+
+            if ((ptc >= pta) && (ptc >= ptd)) { // 2. PTC
+              System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+
+              if (pta >= ptd) {
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+              } else {
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+              }
+
+            } else if ((pta >= ptc) && (pta >= ptd)) { // 2. PTA
+              System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+
+              if (ptc >= ptd) {
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+              } else {
+                System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+              }
+
+            } else if ((ptd >= ptc) && (ptd >= pta)) { // 2. PTD
+              System.out.println("\n12. Cláudia Amara [PTD] | Votos: " + ptd);
+
+              if (pta >= ptc) {
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+              } else {
+                System.out.println("\n45. Alisson Reis  [PTC] | Votos: " + ptc);
+                System.out.println("\n13. José Ailton   [PTA] | Votos: " + pta);
+              }
+            }
+          }
+
+          int totalVotos = (ptc + ptd + pta + ptf);
+          float metadeVotos = (totalVotos / 2);
+
+          System.out.print("\n");
+
+          if (ptc > metadeVotos) {
+            System.out.println("\nAlisson Reis do partido PTC [45] GANHOU a eleição!");
+          } else if (ptd > metadeVotos) {
+            System.out.println("\nCláudia Amara do partido PTD [12] GANHOU a eleição!");
+          } else if (pta > metadeVotos) {
+            System.out.println("\nJosé Ailton do partido PTA [13] GANHOU a eleição!");
+          } else if (ptf > metadeVotos) {
+            System.out.println("\nLuzia Santos do partido PTF [22] GANHOU a eleição!");
+          } else {
+            System.out.println("\nHaverá 2º turno!");
+          }
+
+          System.out.print("\n");
+
+        } else {
+          System.out.println("\nSenha inválida!");
+
+          opcaoUsuario = 0;
+        }
+
       } else {
         continue;
       }
